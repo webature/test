@@ -34,7 +34,7 @@ nav {
   padding: 0 40px; height: 64px;
 }
 .logo { display: inline-flex; align-items: center; text-decoration: none; margin-right: 64px; flex-shrink: 0; }
-.logo img { height: 26px; width: auto; display: block; }
+.logo img { height: 46px; width: auto; display: block; }
 
 .nav-links { display: flex; align-items: center; gap: 40px; list-style: none; flex: 1; }
 .nav-links a {
@@ -153,7 +153,7 @@ footer { background: var(--footer-bg); border-top: 1px solid var(--border); padd
 
   /* ── NAV: tighter, cleaner ── */
   nav { padding: 0 16px; height: 56px; }
-  .logo img { height: 22px; }
+  .logo img { height: 36px; }
   .mob-menu-btn { width: 44px; height: 44px; }
 
   /* ── MOBILE DRAWER: feels native ── */
