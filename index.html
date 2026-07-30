@@ -5,32 +5,43 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ways of Wagyu | Premium Wagyu Butcher London</title>
+<title>Ways of Wagyu | Premium Wagyu Butcher, London</title>
   <!-- SEO -->
-  <meta name="description" content="Ways of Wagyu is a premium butcher in London specialising in exceptional Wagyu beef, expertly selected cuts and a refined butcher experience for customers who value quality.">
+  <meta name="description" content="Ways of Wagyu is a premium Wagyu butcher based in London, hand-selecting, dry-ageing and butchering authentic A5 Japanese and British Wagyu beef for chefs, restaurants and home cooks.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="/">
+  <link rel="canonical" href="https://waysofwagyu.co.uk/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="/">
-  <meta property="og:title" content="Ways of Wagyu | Premium Wagyu Butcher London">
-  <meta property="og:description" content="Premium Wagyu beef in London — carefully selected cuts, exceptional marbling and expert butchery from Ways of Wagyu.">
-  <meta property="og:image" content="og-image.jpg">
+  <meta property="og:url" content="https://waysofwagyu.co.uk/">
+  <meta property="og:title" content="Ways of Wagyu | Premium Wagyu Butcher, London">
+  <meta property="og:description" content="Ways of Wagyu is a premium Wagyu butcher based in London, hand-selecting, dry-ageing and butchering authentic A5 Japanese and British Wagyu beef for chefs, restaurants and home cooks.">
+  <meta property="og:image" content="https://waysofwagyu.co.uk/og-image.jpg">
   <meta property="og:site_name" content="Ways of Wagyu">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ways of Wagyu | Premium Wagyu Butcher London">
-  <meta name="twitter:description" content="Premium Wagyu beef in London — carefully selected cuts, exceptional marbling and expert butchery from Ways of Wagyu.">
-  <meta name="twitter:image" content="og-image.jpg">
+  <meta name="twitter:title" content="Ways of Wagyu | Premium Wagyu Butcher, London">
+  <meta name="twitter:description" content="Ways of Wagyu is a premium Wagyu butcher based in London, hand-selecting, dry-ageing and butchering authentic A5 Japanese and British Wagyu beef for chefs, restaurants and home cooks.">
+  <meta name="twitter:image" content="https://waysofwagyu.co.uk/og-image.jpg">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Butcher",
+  "@type": "LocalBusiness",
   "name": "Ways of Wagyu",
-  "description": "Ways of Wagyu is a premium butcher in London specialising in exceptional Wagyu beef, expertly selected cuts and personal service.",
-  "areaServed": "London, GB"
+  "url": "https://waysofwagyu.co.uk",
+  "logo": "https://waysofwagyu.co.uk/waysofwagyu-logo.png",
+  "description": "Ways of Wagyu is a premium Wagyu butcher based in London, hand-selecting, dry-ageing and butchering authentic A5 Japanese and British Wagyu beef for chefs, restaurants and home cooks.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "London",
+    "addressCountry": "GB"
+  },
+  "areaServed": "GB",
+  "sameAs": [
+    "https://www.instagram.com/waysofwagyu",
+    "https://www.facebook.com/waysofwagyu"
+  ]
 }
 </script>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -47,17 +58,17 @@ nav.scrolled {
 }
 .nav-links a { font-size:1rem; }
 
-/* AVAIL BADGE LINK */
-.member-login-link {
+/* NAV SHOP CTA */
+.nav-shop-link {
   font-family:'DM Sans',sans-serif; font-size:0.85rem; font-weight:500;
   color:var(--text); background:transparent; text-decoration:none; white-space:nowrap;
   border:1px solid var(--border); border-radius:100px; padding:9px 20px;
   transition:background-color .3s ease, border-color .3s ease, color .3s ease;
 }
-.member-login-link:hover { background:rgba(255,255,255,0.09); border-color:rgba(255,255,255,0.3); }
+.nav-shop-link:hover { background:rgba(255,255,255,0.09); border-color:rgba(255,255,255,0.3); }
 /* Nav is scrolled/black — button flips to filled white to match the hero-start-btn look */
-nav.scrolled .member-login-link { background:#fff; color:#000; border-color:#fff; }
-nav.scrolled .member-login-link:hover { background:#fff; border-color:#fff; opacity:0.85; }
+nav.scrolled .nav-shop-link { background:#fff; color:#000; border-color:#fff; }
+nav.scrolled .nav-shop-link:hover { background:#fff; border-color:#fff; opacity:0.85; }
 
 /* HERO */
 .hero { 
@@ -75,7 +86,7 @@ nav.scrolled .member-login-link:hover { background:#fff; border-color:#fff; opac
 }
 
 .hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 60% 55% at 50% 40%, rgba(128,128,128,0.04) 0%, transparent 70%); pointer-events:none; z-index:0; }
-.hero-bg { position:absolute; inset:0; z-index:0; background:linear-gradient(135deg,#3a2118 0%,#8b5138 45%,#d7b28e 100%); overflow:hidden; }
+.hero-bg { position:absolute; inset:0; z-index:0; background:var(--bg); overflow:hidden; }
 .hero-video {
   position:absolute; inset:0;
   width:100%; height:100%;
@@ -89,7 +100,7 @@ nav.scrolled .member-login-link:hover { background:#fff; border-color:#fff; opac
   /* Softened the gradient slightly for a more centered focus */
   background:linear-gradient(
     to top,
-    rgba(0,0,0,0.72) 0%,
+    var(--bg) 0%,
     rgba(0,0,0,0.4) 50%,
     rgba(0,0,0,0.3) 100%
   );
@@ -193,7 +204,7 @@ footer { background:#000; padding:64px 40px 40px; }
 @media (max-width:640px) {
 
   /* NAV */
-  .member-login-link { display: none; }
+  .nav-shop-link { display: none; }
 
   /* HERO */
   .hero { padding: 0 20px; }
@@ -233,82 +244,81 @@ footer { background:#000; padding:64px 40px 40px; }
 <body>
 
 <nav>
-  <a href="index.html" class="logo"><img src="ways-of-wagyu-logo.png" alt="Ways of Wagyu"></a>
+  <a href="index.html" class="logo"><img src="waysofwagyu-logo.png" alt="Ways of Wagyu"></a>
   <ul class="nav-links">
-    <li><a href="membership.html">Our Wagyu</a></li>
-    <li><a href="events.html">Cuts</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="our-wagyu.html">Our Wagyu</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
   <div class="nav-right">
-    <a href="https://crossmember.co.uk/my-membership/" target="_blank" rel="noopener" class="member-login-link">Order Enquiries</a>
+    <a href="shop.html" class="nav-shop-link">Shop Wagyu</a>
     <button class="mob-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
 <div class="mob-drawer">
-  <a href="membership.html" class="mob-drawer-link">Our Wagyu</a>
-  <a href="events.html" class="mob-drawer-link">Cuts</a>
+  <a href="shop.html" class="mob-drawer-link">Shop</a>
+  <a href="our-wagyu.html" class="mob-drawer-link">Our Wagyu</a>
   <a href="about.html" class="mob-drawer-link">About</a>
   <a href="contact.html" class="mob-drawer-link">Contact</a>
-  <a href="https://crossmember.co.uk/my-membership/" target="_blank" rel="noopener" class="mob-drawer-link">Order Enquiries</a>
 </div>
 
 <section class="hero">
   <div class="hero-bg">
-    <img class="hero-video" src="hero-image.jpg" alt="Ways of Wagyu premium butcher in London">
+    <img class="hero-video" src="hero-image.jpg" alt="Ways of Wagyu — premium Wagyu beef cuts">
   </div>
   <div class="hero-text">
     <div class="hero-line1">Ways of Wagyu</div>
-    <div class="hero-line2">Premium Wagyu Butcher · London</div>
+    <div class="hero-line2">London's home of premium Wagyu beef</div>
   </div>
 </section>
 
 <section class="reel" id="about">
   <div class="reel-inner js-reveal">
     <div>
-      <div class="reel-label">Our craft</div>
-      <h2 class="reel-heading"><strong>Exceptional Wagyu</strong><br>selected for flavour,<br>marbling and<br>provenance.</h2>
+      <div class="reel-label">Our Story</div>
+      <h2 class="reel-heading"><strong>Master butchery</strong><br>built for those who<br>demand the finest<br>Wagyu in London.</h2>
     </div>
     <div>
-      <p class="reel-body">Ways of Wagyu is a premium London butcher dedicated to exceptional Wagyu beef. We select outstanding cuts for their marbling, tenderness and depth of flavour, then prepare each one with the care and precision remarkable beef deserves.</p>
-      <a href="/about" class="reel-cta">Discover our story</a>
+      <p class="reel-body">Ways of Wagyu hand-selects authentic A5 Japanese and British Wagyu beef, dry-ageing and butchering every cut in-house. From chefs' tasting menus to Sunday roasts at home — our craft is built on provenance, marbling and unmistakable flavour, never compromise.</p>
+      <a href="about.html" class="reel-cta">Discover our story</a>
     </div>
   </div>
 </section>
 
 <section class="services-preview">
   <div class="section-header js-reveal">
-    <h2>The Wagyu Experience</h2>
-    <a href="/membership" class="see-all">Explore our Wagyu →</a>
+    <h2>Why Ways of Wagyu</h2>
+    <a href="shop.html" class="see-all">View our range →</a>
   </div>
   <div class="do-panel js-reveal">
     <div>
-      <div class="do-label">Ways of Wagyu · London</div>
-      <div class="do-heading">A Butcher Built Around<br>Exceptional Beef</div>
-      <p class="do-desc">From beautifully marbled steaks to impressive centrepiece cuts, we bring premium Wagyu to London with knowledgeable service, careful preparation and an uncompromising focus on quality.</p>
-      <a href="/membership" class="do-cta">Explore our Wagyu →</a>
+      <div class="do-label">Ways of Wagyu</div>
+      <div class="do-heading">Wagyu Butchered<br>To Exacting Standards</div>
+      <p class="do-desc">Every cut is hand-selected for marbling, dry-aged in our London butchery and prepared to order — trusted by leading restaurants and home cooks who accept nothing less than the real thing.</p>
+      <a href="shop.html" class="do-cta">Explore our range →</a>
     </div>
     <div class="do-grid">
       <div class="do-item">
         <div class="do-item-num">01</div>
-        <div class="do-item-title">Premium Wagyu</div>
-        <div class="do-item-desc">Exceptional beef selected for marbling and flavour.</div>
+        <div class="do-item-title">Authentic A5 Wagyu</div>
+        <div class="do-item-desc">Hand-selected for marbling and traceable to farm.</div>
       </div>
       <div class="do-item">
         <div class="do-item-num">02</div>
-        <div class="do-item-title">Expert Butchery</div>
-        <div class="do-item-desc">Cuts prepared with precision, care and respect.</div>
+        <div class="do-item-title">Dry-Aged In House</div>
+        <div class="do-item-desc">Butchered fresh to order in our London workshop.</div>
       </div>
       <div class="do-item">
         <div class="do-item-num">03</div>
-        <div class="do-item-title">Remarkable Cuts</div>
-        <div class="do-item-desc">From steak-night favourites to centrepiece selections.</div>
+        <div class="do-item-title">London &amp; UK Delivery</div>
+        <div class="do-item-desc">Chilled, next-day delivery across the country.</div>
       </div>
       <div class="do-item">
         <div class="do-item-num">04</div>
-        <div class="do-item-title">Personal Service</div>
-        <div class="do-item-desc">Guidance on choosing, preparing and enjoying Wagyu.</div>
+        <div class="do-item-title">Trusted by Chefs</div>
+        <div class="do-item-desc">Supplying leading kitchens across London.</div>
       </div>
     </div>
   </div>
@@ -316,35 +326,23 @@ footer { background:#000; padding:64px 40px 40px; }
 
 <!-- PARTNERS -->
 <section class="brands-strip js-reveal">
-  <div class="brands-label">Our Wagyu Selection</div>
+  <div class="brands-label">Our Partners</div>
   <div class="brands-track">
     <div class="brands-inner">
-      <!-- set 1 -->
-      <div class="brand-logo"><a href="https://promo.pirelli.com/tyres/en-GB/car/partner/overview" target="_blank" rel="noopener"><span style="font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;">Japanese A5</span></a></div>
-      <div class="brand-logo"><a href="https://straighteightlogistics.com" target="_blank" rel="noopener"><span style="font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;">Wagyu Ribeye</span></a></div>
-      <div class="brand-logo"><a href="https://www.opieoils.co.uk" target="_blank" rel="noopener"><span style="font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;">Wagyu Sirloin</span></a></div>
-      <div class="brand-logo"><a href="https://chameleonshield.co.uk" target="_blank" rel="noopener"><span style="font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;">Wagyu Fillet</span></a></div>
-      <div class="brand-logo"><a href="https://locktonperformance.com/insurance-services/specialist-lamborghini-insurance.html" target="_blank" rel="noopener"><span style="font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;">Wagyu Striploin</span></a></div>
-      <div class="brand-logo"><a href="https://www.hrowen.co.uk/lamborghini" target="_blank" rel="noopener"><span style="font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;">Wagyu Rump</span></a></div>
-      <div class="brand-logo"><a href="https://supercarservice.co.uk" target="_blank" rel="noopener"><span style="font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;">Wagyu Tomahawk</span></a></div>
-      <div class="brand-logo"><a href="https://www.shorade.co.uk" target="_blank" rel="noopener"><span style="font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;">Wagyu Short Rib</span></a></div>
-      <div class="brand-logo"><a href="https://www.classicadditions.com" target="_blank" rel="noopener"><span style="font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;">Wagyu Picanha</span></a></div>
-      <div class="brand-logo"><a href="https://www.emblemsportscars.com" target="_blank" rel="noopener"><span style="font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;">Wagyu Denver</span></a></div>
-      <div class="brand-logo"><a href="https://www.sytner.co.uk/lamborghini" target="_blank" rel="noopener"><span style="font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;">Wagyu Burgers</span></a></div>
-      <div class="brand-logo"><a href="https://www.individualsc.co.uk/lamborghiniapprovedbodyshop" target="_blank" rel="noopener"><span style="font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;">Wagyu Sharing Cuts</span></a></div>
+      <!-- set 1 — placeholders: replace hrefs, alt text and logo images with your real partners -->
+      <div class="brand-logo"><a href="#" target="_blank" rel="noopener"><img src="logos/logo-1.png" alt="Farm partner"></a></div>
+      <div class="brand-logo"><a href="#" target="_blank" rel="noopener"><img src="logos/logo-2.png" alt="Delivery partner"></a></div>
+      <div class="brand-logo"><a href="#" target="_blank" rel="noopener"><img src="logos/logo-3.png" alt="Restaurant partner"></a></div>
+      <div class="brand-logo"><a href="#" target="_blank" rel="noopener"><img src="logos/logo-4.png" alt="Certification body"></a></div>
+      <div class="brand-logo"><a href="#" target="_blank" rel="noopener"><img src="logos/logo-5.png" alt="Press feature"></a></div>
+      <div class="brand-logo"><a href="#" target="_blank" rel="noopener"><img src="logos/logo-6.png" alt="Trade association"></a></div>
       <!-- set 2 — duplicate for seamless loop -->
-       <div class="brand-logo"><a href="https://promo.pirelli.com/tyres/en-GB/car/partner/overview" target="_blank" rel="noopener"><span style="font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;">Japanese A5</span></a></div>
-      <div class="brand-logo"><a href="https://straighteightlogistics.com" target="_blank" rel="noopener"><span style="font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;">Wagyu Ribeye</span></a></div>
-      <div class="brand-logo"><a href="https://www.opieoils.co.uk" target="_blank" rel="noopener"><span style="font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;">Wagyu Sirloin</span></a></div>
-      <div class="brand-logo"><a href="https://chameleonshield.co.uk" target="_blank" rel="noopener"><span style="font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;">Wagyu Fillet</span></a></div>
-      <div class="brand-logo"><a href="https://locktonperformance.com/insurance-services/specialist-lamborghini-insurance.html" target="_blank" rel="noopener"><span style="font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;">Wagyu Striploin</span></a></div>
-      <div class="brand-logo"><a href="https://www.hrowen.co.uk/lamborghini" target="_blank" rel="noopener"><span style="font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;">Wagyu Rump</span></a></div>
-      <div class="brand-logo"><a href="https://supercarservice.co.uk" target="_blank" rel="noopener"><span style="font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;">Wagyu Tomahawk</span></a></div>
-      <div class="brand-logo"><a href="https://www.shorade.co.uk" target="_blank" rel="noopener"><span style="font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;">Wagyu Short Rib</span></a></div>
-      <div class="brand-logo"><a href="https://www.classicadditions.com" target="_blank" rel="noopener"><span style="font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;">Wagyu Picanha</span></a></div>
-      <div class="brand-logo"><a href="https://www.emblemsportscars.com" target="_blank" rel="noopener"><span style="font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;">Wagyu Denver</span></a></div>
-      <div class="brand-logo"><a href="https://www.sytner.co.uk/lamborghini" target="_blank" rel="noopener"><span style="font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;">Wagyu Burgers</span></a></div>
-      <div class="brand-logo"><a href="https://www.individualsc.co.uk/lamborghiniapprovedbodyshop" target="_blank" rel="noopener"><span style="font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap;">Wagyu Sharing Cuts</span></a></div>
+      <div class="brand-logo"><a href="#" target="_blank" rel="noopener"><img src="logos/logo-1.png" alt="Farm partner"></a></div>
+      <div class="brand-logo"><a href="#" target="_blank" rel="noopener"><img src="logos/logo-2.png" alt="Delivery partner"></a></div>
+      <div class="brand-logo"><a href="#" target="_blank" rel="noopener"><img src="logos/logo-3.png" alt="Restaurant partner"></a></div>
+      <div class="brand-logo"><a href="#" target="_blank" rel="noopener"><img src="logos/logo-4.png" alt="Certification body"></a></div>
+      <div class="brand-logo"><a href="#" target="_blank" rel="noopener"><img src="logos/logo-5.png" alt="Press feature"></a></div>
+      <div class="brand-logo"><a href="#" target="_blank" rel="noopener"><img src="logos/logo-6.png" alt="Trade association"></a></div>
     </div>
   </div>
 </section>
@@ -356,19 +354,16 @@ footer { background:#000; padding:64px 40px 40px; }
       <a href="/privacy">Privacy Policy</a>
     </div>
     <div class="footer-social">
-      <a href="/contact" target="_blank" rel="noopener" aria-label="Instagram">
+      <a href="https://www.instagram.com/waysofwagyu" target="_blank" rel="noopener" aria-label="Instagram">
         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.6" fill="currentColor" stroke="none"/></svg>
       </a>
-      <a href="/contact" target="_blank" rel="noopener" aria-label="Facebook">
+      <a href="https://www.facebook.com/waysofwagyu" target="_blank" rel="noopener" aria-label="Facebook">
         <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M13.5 21v-7.9h2.66l.4-3.09h-3.06V8.04c0-.9.25-1.5 1.54-1.5h1.64V3.77C16.47 3.68 15.5 3.6 14.38 3.6c-2.34 0-3.94 1.43-3.94 4.05v2.36H7.77v3.09h2.67V21h3.06z"/></svg>
-      </a>
-      <a href="/contact" target="_blank" rel="noopener" aria-label="YouTube">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="5"/><path d="M10 8.5l6 3.5-6 3.5z" fill="currentColor" stroke="none"/></svg>
       </a>
     </div>
     <div class="footer-legal-text">
       <p>Copyright © 2026 Ways of Wagyu. All Rights Reserved.</p>
-      <p>Ways of Wagyu is a premium butcher in London, dedicated to exceptional Wagyu beef, expert preparation and personal service.</p>
+      <p>Ways of Wagyu, London, United Kingdom.</p>
       <p>Website by <a href="https://webature.co.uk" target="_blank" rel="noopener">Webature</a></p>
     </div>
   </div>
