@@ -2,341 +2,141 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ways of Wagyu | Premium Wagyu Butcher, London</title>
-  <!-- SEO -->
-  <meta name="description" content="Ways of Wagyu is a premium Wagyu butcher based in London, hand-selecting, dry-ageing and butchering authentic A5 Japanese and British Wagyu beef for chefs, restaurants and home cooks.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://waysofwagyu.co.uk/">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://waysofwagyu.co.uk/">
-  <meta property="og:title" content="Ways of Wagyu | Premium Wagyu Butcher, London">
-  <meta property="og:description" content="Ways of Wagyu is a premium Wagyu butcher based in London, hand-selecting, dry-ageing and butchering authentic A5 Japanese and British Wagyu beef for chefs, restaurants and home cooks.">
-  <meta property="og:image" content="https://waysofwagyu.co.uk/og-image.jpg">
-  <meta property="og:site_name" content="Ways of Wagyu">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ways of Wagyu | Premium Wagyu Butcher, London">
-  <meta name="twitter:description" content="Ways of Wagyu is a premium Wagyu butcher based in London, hand-selecting, dry-ageing and butchering authentic A5 Japanese and British Wagyu beef for chefs, restaurants and home cooks.">
-  <meta name="twitter:image" content="https://waysofwagyu.co.uk/og-image.jpg">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Ways of Wagyu",
-  "url": "https://waysofwagyu.co.uk",
-  "logo": "https://waysofwagyu.co.uk/waysofwagyu-logo.png",
-  "description": "Ways of Wagyu is a premium Wagyu butcher based in London, hand-selecting, dry-ageing and butchering authentic A5 Japanese and British Wagyu beef for chefs, restaurants and home cooks.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "London",
-    "addressCountry": "GB"
-  },
-  "areaServed": "GB",
-  "sameAs": [
-    "https://www.instagram.com/waysofwagyu",
-    "https://www.facebook.com/waysofwagyu"
-  ]
-}
-</script>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="shared.css">
-<style>
-/* NAV — fixed, transparent over hero, solid black once scrolled */
-nav {
-  position:fixed; top:0; left:0; right:0; z-index:1000;
-  background:transparent;
-  transition:background-color .4s ease;
-}
-nav.scrolled {
-  background:#000;
-}
-.nav-links a { font-size:1rem; }
-
-/* NAV SHOP CTA */
-.nav-shop-link {
-  font-family:'DM Sans',sans-serif; font-size:0.85rem; font-weight:500;
-  color:var(--text); background:transparent; text-decoration:none; white-space:nowrap;
-  border:1px solid var(--border); border-radius:100px; padding:9px 20px;
-  transition:background-color .3s ease, border-color .3s ease, color .3s ease;
-}
-.nav-shop-link:hover { background:rgba(255,255,255,0.09); border-color:rgba(255,255,255,0.3); }
-/* Nav is scrolled/black — button flips to filled white to match the hero-start-btn look */
-nav.scrolled .nav-shop-link { background:#fff; color:#000; border-color:#fff; }
-nav.scrolled .nav-shop-link:hover { background:#fff; border-color:#fff; opacity:0.85; }
-
-/* HERO */
-.hero { 
-  position: relative; 
-  width: 100vw; 
-  height: 100vh; 
-  display: flex; 
-  flex-direction: column; 
-  /* Center the content vertically and horizontally */
-  justify-content: center; 
-  align-items: center; 
-  text-align: center;
-  padding: 0 40px; 
-  overflow: hidden; 
-}
-
-.hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 60% 55% at 50% 40%, rgba(128,128,128,0.04) 0%, transparent 70%); pointer-events:none; z-index:0; }
-.hero-bg { position:absolute; inset:0; z-index:0; background:var(--bg); overflow:hidden; }
-.hero-video {
-  position:absolute; inset:0;
-  width:100%; height:100%;
-  object-fit:cover;
-  display:block;
-}
-
-.hero-bg::after {
-  content:'';
-  position:absolute; inset:0;
-  /* Softened the gradient slightly for a more centered focus */
-  background:linear-gradient(
-    to top,
-    var(--bg) 0%,
-    rgba(0,0,0,0.4) 50%,
-    rgba(0,0,0,0.3) 100%
-  );
-  z-index:1;
-  pointer-events:none;
-}
-
-.hero-text { position:relative; z-index:2; }
-
-.hero-line1 { 
-  /* Smaller, more elegant size with uppercase and wide tracking */
-  font-size: clamp(2rem, 4vw, 3.5rem); 
-  font-weight: 300; 
-  line-height: 1.1; 
-  letter-spacing: 0.1em; 
-  text-transform: uppercase;
-  color: var(--text); 
-  margin-bottom: 16px;
-  animation: fadeSlideUp .9s .1s both; 
-}
-
-.hero-line2 { 
-  /* Significantly smaller subtitle size */
-  font-size: clamp(0.85rem, 1.5vw, 1.1rem); 
-  font-weight: 300; 
-  letter-spacing: 0.18em; 
-  text-transform: uppercase;
-  color: var(--text-muted); 
-  animation: fadeSlideUp .9s .25s both; 
-}
-
-@keyframes fadeSlideUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
-/* ABOUT */
-.reel { background:var(--bg); border-top:1px solid var(--border); }
-.reel-inner { max-width:1400px; margin:0 auto; padding:100px 40px; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
-.reel-label { font-size:0.62rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--text-faint); margin-bottom:20px; }
-.reel-heading { font-size:clamp(2rem,3.5vw,3.2rem); font-weight:300; line-height:1.2; letter-spacing:-0.02em; color:var(--text); }
-.reel-heading strong { font-weight:500; }
-.reel-body { font-size:0.93rem; color:var(--text-muted); line-height:1.8; max-width:420px; margin-bottom:36px; }
-.reel-cta { display:inline-flex; align-items:center; gap:12px; font-size:0.72rem; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-dim); text-decoration:none; border-bottom:1px solid var(--border-mid); padding-bottom:4px; transition:color .2s, border-color .2s, gap .3s; }
-.reel-cta:hover { color:var(--text); border-color:var(--text-muted); gap:20px; }
-.reel-cta::after { content:'→'; font-size:1rem; }
-
-/* SERVICES PREVIEW */
-.services-preview { background:var(--bg); padding:0 40px 120px; }
-.section-header { max-width:1400px; margin:0 auto 60px; display:flex; align-items:flex-end; justify-content:space-between; padding-top:80px; border-top:1px solid var(--border); flex-wrap:wrap; gap:20px; }
-.section-header h2 { font-size:clamp(1.8rem,3vw,2.8rem); font-weight:300; letter-spacing:-0.03em; color:var(--text); }
-.see-all { font-size:0.68rem; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; color:var(--text-faint); text-decoration:none; transition:color .2s; }
-.see-all:hover { color:var(--text); }
-.do-panel { max-width:1400px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
-.do-label { font-size:0.6rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--text-faint); margin-bottom:20px; }
-.do-heading { font-size:clamp(2rem,3.4vw,3.2rem); font-weight:300; letter-spacing:-0.03em; line-height:1.1; color:var(--text); margin-bottom:24px; }
-.do-desc { font-size:0.92rem; color:var(--text-muted); line-height:1.8; max-width:420px; margin-bottom:32px; }
-.do-cta { display:inline-flex; align-items:center; gap:10px; font-size:0.75rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-dim); text-decoration:none; border-bottom:1px solid var(--border-mid); padding-bottom:4px; transition:color .2s, border-color .2s, gap .3s; }
-.do-cta:hover { color:var(--text); border-color:var(--text-muted); gap:16px; }
-.do-grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--border); border:1px solid var(--border); }
-.do-item { background:var(--bg); padding:32px 28px; transition:background .3s; }
-.do-item:hover { background:var(--card-hover); }
-.do-item-num { font-size:0.58rem; letter-spacing:0.2em; color:var(--text-faint); margin-bottom:16px; }
-.do-item-title { font-size:0.92rem; font-weight:500; color:var(--text); margin-bottom:8px; }
-.do-item-desc { font-size:0.78rem; color:var(--text-muted); line-height:1.6; }
-
-@media (max-width:900px) { .do-panel { grid-template-columns:1fr; gap:40px; } }
-
-/* FOOTER */
-footer { background:#000; padding:64px 40px 40px; }
-.footer-inner { max-width:1400px; margin:0 auto; display:flex; flex-direction:column; align-items:center; gap:28px; text-align:center; }
-.footer-links { display:flex; flex-wrap:wrap; justify-content:center; gap:16px 36px; position:static; order:1; }
-.footer-links a { font-family:'DM Sans',sans-serif; font-size:0.78rem; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; color:#fff; text-decoration:none; transition:opacity .2s; }
-.footer-links a:hover { opacity:0.6; }
-.footer-social { display:flex; align-items:center; gap:14px; position:static; float:none; order:2; margin:0; }
-.footer-social a { width:34px; height:34px; border-radius:50%; background:#fff; color:#000; display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:opacity .2s; }
-.footer-social a:hover { opacity:0.75; }
-.footer-legal-text { display:flex; flex-direction:column; gap:6px; max-width:640px; position:static; order:3; }
-.footer-legal-text p { font-family:'DM Sans',sans-serif; font-size:0.72rem; line-height:1.6; color:rgba(255,255,255,0.4); margin:0; }
-.footer-legal-text a { color:rgba(255,255,255,0.4); text-decoration:underline; text-underline-offset:2px; transition:color .2s; }
-.footer-legal-text a:hover { color:#fff; }
-
-/* ══════════════════════════════════════
-   INDEX — MOBILE OVERHAUL  ≤ 640px
-══════════════════════════════════════ */
-@media (max-width:640px) {
-
-  /* NAV */
-  .nav-shop-link { display: none; }
-
-  /* HERO */
-  .hero { padding: 0 20px; }
-  .hero-line1 { font-size: clamp(1.6rem, 6vw, 2.2rem); }
-  .hero-line2 { font-size: clamp(0.7rem, 3vw, 0.85rem); }
-  /* REEL (about block) */
-  .reel-inner {
-    grid-template-columns: 1fr;
-    gap: 28px;
-    padding: 64px 20px;
-  }
-  .reel-heading { font-size: clamp(1.9rem, 8vw, 2.8rem); }
-  .reel-body { font-size: 0.9rem; margin-bottom: 28px; max-width: 100%; }
-
-  /* SERVICES PREVIEW */
-  .services-preview { padding: 0 20px 80px; }
-  .section-header { margin-bottom: 40px; padding-top: 60px; }
-  .section-header h2 { font-size: clamp(1.6rem, 7vw, 2.2rem); }
-  .do-panel { gap: 32px; }
-  .do-heading { font-size: clamp(1.7rem, 8vw, 2.4rem); }
-  .do-desc { font-size: 0.88rem; margin-bottom: 24px; }
-  .do-grid { grid-template-columns: 1fr; }
-  .do-item { padding: 24px 20px; }
-
-  /* FOOTER */
-  footer { padding: 48px 20px 32px; }
-  .footer-links { gap: 14px 24px; }
-
-}
-</style>
+<title>FERUS — Hunter Collection</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<nav>
-  <a href="index.html" class="logo"><img src="waysofwagyu-logo.png" alt="Ways of Wagyu"></a>
-  <ul class="nav-links">
-    <li><a href="shop.html">Shop</a></li>
-    <li><a href="our-wagyu.html">Our Wagyu</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-  <div class="nav-right">
-    <a href="shop.html" class="nav-shop-link">Shop Wagyu</a>
-    <button class="mob-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
-  </div>
-</nav>
+<div class="grain"></div>
 
-<div class="mob-drawer">
-  <a href="shop.html" class="mob-drawer-link">Shop</a>
-  <a href="our-wagyu.html" class="mob-drawer-link">Our Wagyu</a>
-  <a href="about.html" class="mob-drawer-link">About</a>
-  <a href="contact.html" class="mob-drawer-link">Contact</a>
-</div>
-
-<section class="hero">
-  <div class="hero-bg">
-    <img class="hero-video" src="hero-image.jpg" alt="Ways of Wagyu — premium Wagyu beef cuts">
-  </div>
-  <div class="hero-text">
-    <div class="hero-line1">Ways of Wagyu</div>
-    <div class="hero-line2">London's home of premium Wagyu beef</div>
-  </div>
-</section>
-
-<section class="reel" id="about">
-  <div class="reel-inner js-reveal">
-    <div>
-      <div class="reel-label">Our Story</div>
-      <h2 class="reel-heading"><strong>Master butchery</strong><br>built for those who<br>demand the finest<br>Wagyu in London.</h2>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#" class="logo">FERUS</a>
+    <nav class="main-nav">
+      <a href="#">New Arrivals</a>
+      <a href="#">Shop</a>
+      <a href="#">Collaborations</a>
+      <a href="#">Community</a>
+      <a href="#">Support</a>
+    </nav>
+    <div class="header-actions">
+      <a href="#" class="header-link">Cart</a>
+      <a href="#" class="header-link header-link--login">Login</a>
     </div>
-    <div>
-      <p class="reel-body">Ways of Wagyu hand-selects authentic A5 Japanese and British Wagyu beef, dry-ageing and butchering every cut in-house. From chefs' tasting menus to Sunday roasts at home — our craft is built on provenance, marbling and unmistakable flavour, never compromise.</p>
-      <a href="about.html" class="reel-cta">Discover our story</a>
-    </div>
+    <button class="mobile-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
-</section>
+</header>
 
-<section class="services-preview">
-  <div class="section-header js-reveal">
-    <h2>Why Ways of Wagyu</h2>
-    <a href="shop.html" class="see-all">View our range →</a>
-  </div>
-  <div class="do-panel js-reveal">
-    <div>
-      <div class="do-label">Ways of Wagyu</div>
-      <div class="do-heading">Wagyu Butchered<br>To Exacting Standards</div>
-      <p class="do-desc">Every cut is hand-selected for marbling, dry-aged in our London butchery and prepared to order — trusted by leading restaurants and home cooks who accept nothing less than the real thing.</p>
-      <a href="shop.html" class="do-cta">Explore our range →</a>
+<main>
+  <section class="hero">
+    <div class="hero-media">
+      <!-- Client photo slot: replace .hero-media background-image in styles.css,
+           or swap this div for <img class="hero-img" src="..." alt="..."> -->
+      <div class="hero-placeholder">
+        <span class="placeholder-label">Hero portrait — client asset pending</span>
+      </div>
+      <div class="hero-vignette"></div>
     </div>
-    <div class="do-grid">
-      <div class="do-item">
-        <div class="do-item-num">01</div>
-        <div class="do-item-title">Authentic A5 Wagyu</div>
-        <div class="do-item-desc">Hand-selected for marbling and traceable to farm.</div>
-      </div>
-      <div class="do-item">
-        <div class="do-item-num">02</div>
-        <div class="do-item-title">Dry-Aged In House</div>
-        <div class="do-item-desc">Butchered fresh to order in our London workshop.</div>
-      </div>
-      <div class="do-item">
-        <div class="do-item-num">03</div>
-        <div class="do-item-title">London &amp; UK Delivery</div>
-        <div class="do-item-desc">Chilled, next-day delivery across the country.</div>
-      </div>
-      <div class="do-item">
-        <div class="do-item-num">04</div>
-        <div class="do-item-title">Trusted by Chefs</div>
-        <div class="do-item-desc">Supplying leading kitchens across London.</div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">
+        <span class="rivet-rail" aria-hidden="true"><i></i><i></i><i></i></span>
+        2024 Collection
+      </p>
+      <h1 class="hero-title">Hunter<br>Collection</h1>
+      <p class="hero-meta">12 Pieces — Outerwear &amp; Hardware</p>
+
+      <div class="hero-scroll-cue" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
       </div>
     </div>
-  </div>
-</section>
 
-<footer>
+    <aside class="spec-panel" aria-label="Filter products">
+      <div class="spec-stitch-edge" aria-hidden="true"></div>
+
+      <div class="spec-block">
+        <h2 class="spec-label">Size</h2>
+        <div class="size-grid">
+          <button class="size-btn">XS</button>
+          <button class="size-btn">S</button>
+          <button class="size-btn is-active">M</button>
+          <button class="size-btn">L</button>
+          <button class="size-btn">XL</button>
+          <button class="size-btn">XXL</button>
+        </div>
+      </div>
+
+      <div class="chain-divider" aria-hidden="true"></div>
+
+      <div class="spec-block">
+        <h2 class="spec-label">Category</h2>
+        <ul class="spec-list">
+          <li><a href="#">Jackets</a></li>
+          <li><a href="#" class="is-active">Outerwear</a></li>
+          <li><a href="#">Denim</a></li>
+          <li><a href="#">Accessories</a></li>
+          <li><a href="#">Hardware</a></li>
+        </ul>
+      </div>
+
+      <div class="chain-divider" aria-hidden="true"></div>
+
+      <div class="spec-block">
+        <h2 class="spec-label">Material</h2>
+        <ul class="spec-list">
+          <li><a href="#">Waxed Cotton</a></li>
+          <li><a href="#">Full-Grain Leather</a></li>
+          <li><a href="#">Solid Brass</a></li>
+          <li><a href="#">Raw Selvedge</a></li>
+          <li><a href="#">Nickel</a></li>
+        </ul>
+      </div>
+
+      <div class="spec-footer">
+        <span class="spec-tag-no">NO. 014 / HTR‑24</span>
+      </div>
+    </aside>
+  </section>
+
+  <section class="index-strip" aria-label="Collection index">
+    <div class="index-inner">
+      <p class="index-item">Waxed Field Jacket</p>
+      <p class="index-item">Engineer Boot, Black</p>
+      <p class="index-item">Solid Brass Buckle Belt</p>
+      <p class="index-item">Raw Selvedge Trouser</p>
+      <p class="index-item">Wallet Chain, Nickel</p>
+      <p class="index-item">Heavyweight Tee, Tobacco</p>
+    </div>
+  </section>
+
+  <section class="editorial">
+    <div class="editorial-inner">
+      <span class="section-tag">01 — The Brief</span>
+      <h2 class="editorial-heading">Built for weather.<br>Finished for the street.</h2>
+      <p class="editorial-copy">
+        Hunter takes its cues from the working outerwear of the American west and
+        the wet-weather gear of the North Atlantic — then strips both back to a
+        London-ready silhouette. Every hardware piece is solid, not plated.
+        Every seam is load-bearing. Nothing on the rack is decorative.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
   <div class="footer-inner">
-    <div class="footer-links">
-      <a href="/terms">Terms &amp; Conditions</a>
-      <a href="/privacy">Privacy Policy</a>
-    </div>
-    <div class="footer-social">
-      <a href="https://www.instagram.com/waysofwagyu" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.6" fill="currentColor" stroke="none"/></svg>
-      </a>
-      <a href="https://www.facebook.com/waysofwagyu" target="_blank" rel="noopener" aria-label="Facebook">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M13.5 21v-7.9h2.66l.4-3.09h-3.06V8.04c0-.9.25-1.5 1.54-1.5h1.64V3.77C16.47 3.68 15.5 3.6 14.38 3.6c-2.34 0-3.94 1.43-3.94 4.05v2.36H7.77v3.09h2.67V21h3.06z"/></svg>
-      </a>
-    </div>
-    <div class="footer-legal-text">
-      <p>Copyright © 2026 Ways of Wagyu. All Rights Reserved.</p>
-      <p>Ways of Wagyu, London, United Kingdom.</p>
-      <p>Website by <a href="https://webature.co.uk" target="_blank" rel="noopener">Webature</a></p>
-    </div>
+    <span class="logo logo--small">FERUS</span>
+    <p class="footer-note">© 2024 Ferus. Built by Webature.</p>
   </div>
 </footer>
 
-<script src="shared.js"></script>
-<script>
-// Nav: transparent at top, solid black once the page is scrolled
-(function() {
-  var nav = document.querySelector('nav');
-  if (!nav) return;
-  function updateNav() {
-    if (window.scrollY > 40) {
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
-    }
-  }
-  window.addEventListener('scroll', updateNav, { passive: true });
-  updateNav();
-})();
-</script>
+<script src="script.js"></script>
+</body>
 </html>
